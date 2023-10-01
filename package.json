@@ -1,0 +1,49 @@
+{
+  "name": "jsonwebsignatures",
+  "version": "1.0.0",
+  "description": "A Node JS Library for implementing Digital Signatures",
+  "type": "module",
+  "engines": {
+    "node": ">= 18.12 <19"
+  },
+  "devDependencies": {
+    "@types/jest": "~29.5",
+    "@types/node": "~18",
+    "@typescript-eslint/eslint-plugin": "~6.2",
+    "@typescript-eslint/parser": "~6.2",
+    "eslint": "~8.46",
+    "eslint-config-prettier": "~9.0",
+    "eslint-plugin-jest": "~27.2",
+    "jest": "~29.6",
+    "prettier": "~3.0",
+    "rimraf": "~5.0",
+    "ts-api-utils": "~1.0",
+    "ts-jest": "~29.1",
+    "typescript": "~5.1"
+  },
+  "scripts": {
+    "start": "node lib/src/main.js",
+    "clean": "rimraf coverage build tmp",
+    "prebuild": "npm run lint",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "build:release": "npm run clean && tsc -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts --ext .mts",
+    "test": "jest --coverage",
+    "prettier": "prettier --config .prettierrc --write .",
+    "test:watch": "jest --watch"
+  },
+  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@stablelib/ed25519": "^1.0.3",
+    "@transmute/x25519-key-pair": "^0.7.0-unstable.81",
+    "bs58": "^5.0.0",
+    "crypto": "^1.0.1",
+    "jose": "^4.14.6",
+    "tslib": "~2.6"
+  },
+  "volta": {
+    "node": "18.12.1"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"getPublicKeyFromPublicKeyJwk.js","sourceRoot":"","sources":["../../src/getPublicKeyFromPublicKeyJwk.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,4BAA4B,GAAG,CAAC,YAAY,EAAE,EAAE;IAC3D,OAAO,UAAU,CAAC,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,YAAY,CAAC,CAAC,EAAE,QAAQ,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC"}
