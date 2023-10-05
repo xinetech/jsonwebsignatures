@@ -1,16 +1,18 @@
 import * as ed25519 from '@stablelib/ed25519';
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const signer = (privateKey: Uint8Array) => {
   return {
-    async sign({ data }) {
+    async sign({ data }) : Promise<Uint8Array> {
       return ed25519.sign(privateKey, data);
     },
   };
 };
 
-export const verifier = (publicKey: Uint8Array) => {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export const verifier = (publicKey: Uint8Array)  => {
   return {
-    async verify({ data, signature }) {
+    async verify({ data, signature }) : Promise<boolean> {
       let verified = false;
       try {
         verified = ed25519.verify(publicKey, data, signature);

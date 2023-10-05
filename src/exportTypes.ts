@@ -1,6 +1,6 @@
-import { base58 } from './encodings/base58.js';
-import { base64url } from './encodings/base64url.js';
-import { Ed25519VerificationKey2018, JsonWebKey2020 } from './types/EdVerificationKey.js';
+//import { base58 } from './encodings/base58.js';
+import { base64url } from "jose";
+import { JsonWebKey2020 } from './types/JsonWebKey.js';
 
 export const toJsonWebKey2020 = (
   id: string,
@@ -28,7 +28,7 @@ export const toJsonWebKey2020 = (
   return k;
 };
 
-export const toX25519KeyAgreementKey2019 = (
+/*export const toX25519KeyAgreementKey2019 = (
   id: string,
   controller: string,
   publicKey: Uint8Array,
@@ -44,9 +44,9 @@ export const toX25519KeyAgreementKey2019 = (
     k.privateKeyBase58 = base58.encode(privateKey);
   }
   return k;
-};
+};*/
 
 export const exportableTypes = {
-  JsonWebKey2020: toJsonWebKey2020,
-  Ed25519VerificationKey2018: toX25519KeyAgreementKey2019,
+  JsonWebKey2020: toJsonWebKey2020
+  //Ed25519VerificationKey2018: toX25519KeyAgreementKey2019,
 };

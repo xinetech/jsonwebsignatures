@@ -37,6 +37,9 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@stablelib/ed25519": "^1.0.3",
+    "@transmute/jose-ld": "^0.7.0-unstable.81",
+    "@transmute/jsonld": "^0.1.0",
+    "@transmute/web-crypto-key-pair": "^0.7.0-unstable.81",
     "@transmute/x25519-key-pair": "^0.7.0-unstable.81",
     "bs58": "^5.0.0",
     "crypto": "^1.0.1",

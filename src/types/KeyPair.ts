@@ -1,9 +1,9 @@
 import { Signer } from "./Signer.js";
 import { Verifier } from "./Verifier.js";
-import { GetSecret } from "./GetSecret.js";
+//import { GetSecret } from "./GetSecret.js";
 
 export interface KeyPair {
-    fingerprint(): Promise<string>; // produce a fingerprint
+    fingerprint(): Promise<string>;
     export({
       type,
       privateKey
@@ -11,11 +11,12 @@ export interface KeyPair {
       type;
       privateKey?: boolean;
     }): Promise<unknown>; 
+    generate?: () => Promise<unknown>; 
     signer?: Signer; 
     verifier?: Verifier;
-    deriveSecret?: GetSecret; 
+    /*deriveSecret?: GetSecret; 
     getDerivedKeyPairs?: () => Promise<unknown[]>; 
-    getPairedKeyPairs?: () => Promise<unknown[]>; 
+    getPairedKeyPairs?: () => Promise<unknown[]>;*/
   }
   
   export function staticImplements<T>() {
